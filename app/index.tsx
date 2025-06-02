@@ -1,5 +1,7 @@
 import { Text, View, StyleSheet, Image } from "react-native";
 import CustomButton from "../components/CustomButton";
+import CustomTextButton from "../components/CustomTextButton";
+import { router } from "expo-router";
 
 export default function Index() {
   return (
@@ -16,7 +18,9 @@ export default function Index() {
         Save the songs you're learning on guitar{"\n"}and never lose track
       </Text>
 
-      <CustomButton title="Get Started" onPress={() => console.log("Pressed")} />
+      <CustomButton title="Sign Up" onPress={() => router.push("/signup")} />
+      <Text style={{...styles.description, marginBottom: 0 }} >Already have an account?</Text><Text/>
+      <CustomTextButton title="Log in" onPress={() => router.push("/login")} />
     </View>
   );
 }
@@ -26,7 +30,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#FAFAFA",
     padding: 24,
   },
   logo: {
@@ -44,11 +47,12 @@ const styles = StyleSheet.create({
     color: "#333",
     marginBottom: 16,
   },
+
   description: {
     fontSize: 16,
     color: "#555",
     textAlign: "center",
-    marginBottom: 32,
+    marginBottom: 30,
     lineHeight: 22,
   },
 });

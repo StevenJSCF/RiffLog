@@ -1,9 +1,17 @@
 import { Stack } from "expo-router";
+import { View, StyleSheet } from "react-native";
 
 export default function RootLayout() {
-  return <Stack 
-  screenOptions={{
-    headerShown: false, // hides the top bar
-  }}
-  />;
+  return (
+    <View style={styles.container}>
+      <Stack screenOptions={{ headerShown: false }} />
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "black", // ← your app-wide background
+  },
+});

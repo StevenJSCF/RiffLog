@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,                  // makes the edges round
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 20
+    marginBottom: 10
   },
   text: {
     color: "#fff",                     // white text
